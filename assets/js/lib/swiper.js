@@ -1922,7 +1922,7 @@
     swiper.emit('transitionStart');
 setTimeout(function(){
 	//console.log(swiper.activeIndex);animation_page()
-	$('#')
+	
 },100);
     if (runCallbacks && activeIndex !== previousIndex) {
       if (dir === 'reset') {
@@ -1940,7 +1940,7 @@ setTimeout(function(){
 		
 		
 		set_tab()
-		
+		set_focus()
     }
   }
 

@@ -125,3 +125,6 @@ function set_tab(){
 	
 	
 }
+function set_focus(){
+	$('.text_container').focus()
+}
