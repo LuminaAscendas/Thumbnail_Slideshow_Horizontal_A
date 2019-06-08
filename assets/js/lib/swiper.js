@@ -1931,8 +1931,9 @@ setTimeout(function(){
       }
       swiper.emit('slideChangeTransitionStart');
 	  //console.log(activeIndex)
-		$('.arrow').css('visibility','hidden')
-		$('#arrow_'+(activeIndex+1)).css('visibility','visible')//.attr('aria-label',$('#arrow_'+(activeIndex+1)).text());
+	  $('.arrow').css('display','none')
+		//$('.arrow').css('visibility','hidden')
+		//$('#arrow_'+(activeIndex+1)).css('visibility','visible')//.attr('aria-label',$('#arrow_'+(activeIndex+1)).text());
 		$('.text_container').css('display','none');
 		$('#textcont_'+(swiper.activeIndex+1)).css('display','block');
 		$('#close_btn').trigger('click');
