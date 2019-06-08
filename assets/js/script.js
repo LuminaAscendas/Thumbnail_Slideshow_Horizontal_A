@@ -8,11 +8,11 @@ $(document).ready(function(){
 //			$('#bullet_'+((i+1))).append('<div class="arrow" id="arrow_'+(i+1)+'"></div>')
 			$('#textcont_'+(i+1)).attr('aria-label',$('#textcont_'+(i+1)).text());
 			$('#imgCont_'+(i+1)+' img').attr('aria-label',slider[i].img_alt_text);
-			$('#imgCont_'+(i+1)+' img').attr('alt','Slider '+(i+1));
+			$('#imgCont_'+(i+1)+' img').attr('alt',(i+1)+'of 5');
 			$('#bullet_'+(i+1)+' img').attr('alt','Slider '+(i+1));
 			//$('#arrow_top').append('<div class="arrow" id="arrow_'+(i+1)+'"></div>')
 			//$('#navbar').append('<div class="arrow" id="arrow_'+(i+1)+'"><img class="thumb_Img1" src="assets/images/thumb_'+((i+1))+'.png"></div>');
-			$('#arrow_top').append('<div class="arrow" id="arrow_'+(i+1)+'"><img class="thumb_Img1" src="assets/images/thumb_'+((i+1))+'.png"></div>');
+			$('#arrow_top').append('<div class="arrow" id="arrow_'+(i+1)+'"><img alt="slide'+(i+1)+'" class="thumb_Img1" src="assets/images/thumb_'+((i+1))+'.png"></div>');
 			
 		
 	}	
@@ -59,7 +59,9 @@ $(document).ready(function(){
 	
 	
 	$('#next_btn,#prev_btn').off('click').on('click',function(){
-		$('.swiper-pagination-bullet').attr('aria-label',thumb_label[0]);
+		for (i=0;i<thumb_label.length;i++){
+			$('#bullet_'+(i+1)).attr('aria-label',thumb_label[i]);
+		}
 		
 	});
 	$('#close_btn').off('click').on('click',function(){
@@ -98,7 +100,10 @@ $(document).ready(function(){
 	$('#whole_container').attr('aria-label','Figure 5.2 thumbnail slidshow');
 	$('#direction_text').attr('aria-label',$('#direction_text').text());
 	setTimeout(function(){
-		$('.swiper-pagination-bullet').attr('aria-label',thumb_label[0]);
+		for (i=0;i<=thumb_label.length;i++){
+			$('#bullet_'+(i+1)).attr('aria-label',thumb_label[i]);
+		}
+//		$('.swiper-pagination-bullet').attr('aria-label',thumb_label[0]);
 		$('.swiper-button-next').attr('id','next_btn')
 		$('.swiper-button-prev').attr('id','prev_btn')
 	},100)
